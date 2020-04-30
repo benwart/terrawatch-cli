@@ -10,6 +10,7 @@
 	"dependencies": {
 		"ink": "^2.7.1",
 		"ink-big-text": "^1.0.1",
+		"ink-progress-bar": "^3.0.0",
 		"pastel": "^1.0.3",
 		"prop-types": "^15.7.2",
 		"react": "^16.13.1"
