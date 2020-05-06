@@ -1,50 +1,46 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Static, Text } from 'ink';
+import React, { useEffect } from 'react';
+import { Provider } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Box } from 'ink';
+import store from '../store';
+import { define, run, complete, WORK_CREATE, WORK_DESTROY } from '../store/workSlice';
+import { CompletedWork, RunningWork } from '../components';
+
+store.dispatch(define(1, 'resouce1', WORK_CREATE));
+store.dispatch(define(2, 'resouce2', WORK_CREATE));
+store.dispatch(define(3, 'resouce1', WORK_DESTROY));
+store.dispatch(run(1, 10));
+store.dispatch(run(2, 30));
+store.dispatch(run(3, 30));
+store.dispatch(complete(2, 20));
+store.dispatch(complete(1, 60));
 
 /// Terraform Apply Wrapper with Progress
-const TerraWatch = () => {
-  const [started] = useState(true);
-  const [runningActions, setRunningActions] = useState([
-    'running 1',
-    'running 2',
-    'running 3'
-  ]);
-  const [completedActions, setCompletedActions] = useState([
-    'completed 1',
-    'completed 2',
-    'completed 3'
-  ]);
-
+const TerraformApply = ({ varFile, module }) => {
+  
   useEffect(() => {
     // kickoff terraform apply (force apply)
-    // parse plan
-    // update task count
-    // parse live output
-      // update running actions
-      setRunningActions([...runningActions, 'on the fly 1']);
-      // update completed actions
-      // handle errors
-      // handle completion of process
-    // pass through process messages like sigterm and sigkill
-  }, [started])
+    // construct the terraform worker
+    // subscribe to event emitter for actions
+    // 
+  })
 
   return (
-    <Box flexDirection="column">
-      <Text>TerraWatch</Text>
-      <Text>Version 1.0.0</Text>
-      <Static>
-        {completedActions.map(action => (
-					<Text key={action}>{action}</Text>
-				))}
-      </Static>
-
-      <Box flexDirection="column" marginTop={1}>
-        {runningActions.map(action => (
-					<Text key={action}>{action}</Text>
-				))}
+    <Provider store={store}>
+      <Box flexDirection="column">
+        <CompletedWork />
+        <RunningWork />
       </Box>
-    </Box>
+    </Provider>
   );
 };
 
-export default TerraWatch;
+TerraformApply.propTypes = {
+  varFile: PropTypes.string,
+  module: PropTypes.string,
+};
+
+TerraformApply.defaultProps = {
+};
+
+export default TerraformApply;
