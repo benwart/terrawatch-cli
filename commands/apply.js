@@ -17,14 +17,6 @@ store.dispatch(complete(1, 60));
 
 /// Terraform Apply Wrapper with Progress
 const TerraformApply = ({ varFile, module }) => {
-  
-  useEffect(() => {
-    // kickoff terraform apply (force apply)
-    // construct the terraform worker
-    // subscribe to event emitter for actions
-    // 
-  })
-
   return (
     <Provider store={store}>
       <Box flexDirection="column">
