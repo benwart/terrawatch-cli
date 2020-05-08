@@ -7,12 +7,14 @@
 		"build": "pastel build",
 		"dev": "pastel dev",
 		"prepare": "pastel build",
-		"test": "jest"
+		"test": "jest",
+		"coverage": "jest --collectCoverage"
 	},
 	"jest": {
 		"verbose": true,
 		"transform": {
-			"^.+\\.js$": "babel-jest"
+			"^.+\\.[jt]sx?$": "babel-jest",
+			"^.+\\.[jt]s?$": "babel-jest"
 		},
 		"globals": {
 			"NODE_ENV": "test"
