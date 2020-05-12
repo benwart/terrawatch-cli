@@ -105,3 +105,8 @@ dist
 
 # Pastel Build
 build/
+
+# Test Directory Terraform Generated
+test/*.plan
+test/*.tfstate*
+test/.terraform/
