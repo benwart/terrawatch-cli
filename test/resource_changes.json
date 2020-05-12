@@ -1,0 +1,285 @@
+{
+  "format_version": "0.1",
+  "terraform_version": "0.12.24",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "docker_container.couchbase",
+          "mode": "managed",
+          "type": "docker_container",
+          "name": "couchbase",
+          "provider_name": "docker",
+          "schema_version": 2,
+          "values": {
+            "attach": false,
+            "capabilities": [],
+            "cpu_set": null,
+            "cpu_shares": null,
+            "destroy_grace_seconds": null,
+            "devices": [],
+            "dns": null,
+            "dns_opts": null,
+            "dns_search": null,
+            "domainname": null,
+            "group_add": null,
+            "healthcheck": [],
+            "host": [],
+            "links": null,
+            "log_driver": "json-file",
+            "log_opts": null,
+            "logs": false,
+            "max_retry_count": null,
+            "memory": null,
+            "memory_swap": null,
+            "mounts": [],
+            "must_run": true,
+            "name": "couchbase",
+            "network_alias": null,
+            "network_mode": null,
+            "networks": null,
+            "networks_advanced": [],
+            "pid_mode": null,
+            "ports": [],
+            "privileged": null,
+            "publish_all_ports": null,
+            "read_only": false,
+            "restart": "no",
+            "rm": false,
+            "start": true,
+            "sysctls": null,
+            "tmpfs": null,
+            "ulimit": [],
+            "upload": [],
+            "user": null,
+            "userns_mode": null,
+            "volumes": [],
+            "working_dir": null
+          }
+        },
+        {
+          "address": "docker_image.couchbase",
+          "mode": "managed",
+          "type": "docker_image",
+          "name": "couchbase",
+          "provider_name": "docker",
+          "schema_version": 0,
+          "values": {
+            "keep_locally": null,
+            "name": "couchbase:latest",
+            "pull_trigger": null,
+            "pull_triggers": [
+              "sha256: 58ff9e691dde64ae2c7b2e2807659b67789f63714704b077ae8ad205a914118c"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "docker_container.couchbase",
+      "mode": "managed",
+      "type": "docker_container",
+      "name": "couchbase",
+      "provider_name": "docker",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "attach": false,
+          "capabilities": [],
+          "cpu_set": null,
+          "cpu_shares": null,
+          "destroy_grace_seconds": null,
+          "devices": [],
+          "dns": null,
+          "dns_opts": null,
+          "dns_search": null,
+          "domainname": null,
+          "group_add": null,
+          "healthcheck": [],
+          "host": [],
+          "links": null,
+          "log_driver": "json-file",
+          "log_opts": null,
+          "logs": false,
+          "max_retry_count": null,
+          "memory": null,
+          "memory_swap": null,
+          "mounts": [],
+          "must_run": true,
+          "name": "couchbase",
+          "network_alias": null,
+          "network_mode": null,
+          "networks": null,
+          "networks_advanced": [],
+          "pid_mode": null,
+          "ports": [],
+          "privileged": null,
+          "publish_all_ports": null,
+          "read_only": false,
+          "restart": "no",
+          "rm": false,
+          "start": true,
+          "sysctls": null,
+          "tmpfs": null,
+          "ulimit": [],
+          "upload": [],
+          "user": null,
+          "userns_mode": null,
+          "volumes": [],
+          "working_dir": null
+        },
+        "after_unknown": {
+          "bridge": true,
+          "capabilities": [],
+          "command": true,
+          "container_logs": true,
+          "devices": [],
+          "entrypoint": true,
+          "env": true,
+          "exit_code": true,
+          "gateway": true,
+          "healthcheck": [],
+          "host": [],
+          "hostname": true,
+          "id": true,
+          "image": true,
+          "ip_address": true,
+          "ip_prefix_length": true,
+          "ipc_mode": true,
+          "labels": true,
+          "mounts": [],
+          "network_data": true,
+          "networks_advanced": [],
+          "ports": [],
+          "shm_size": true,
+          "ulimit": [],
+          "upload": [],
+          "volumes": []
+        }
+      }
+    },
+    {
+      "address": "docker_image.couchbase",
+      "mode": "managed",
+      "type": "docker_image",
+      "name": "couchbase",
+      "provider_name": "docker",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "keep_locally": null,
+          "name": "couchbase:latest",
+          "pull_trigger": null,
+          "pull_triggers": [
+            "sha256: 58ff9e691dde64ae2c7b2e2807659b67789f63714704b077ae8ad205a914118c"
+          ]
+        },
+        "after_unknown": {
+          "id": true,
+          "latest": true,
+          "pull_triggers": [
+            false
+          ]
+        }
+      }
+    }
+  ],
+  "prior_state": {
+    "format_version": "0.1",
+    "terraform_version": "0.12.24",
+    "values": {
+      "root_module": {
+        "resources": [
+          {
+            "address": "data.docker_registry_image.couchbase",
+            "mode": "data",
+            "type": "docker_registry_image",
+            "name": "couchbase",
+            "provider_name": "docker",
+            "schema_version": 0,
+            "values": {
+              "id": "sha256: 58ff9e691dde64ae2c7b2e2807659b67789f63714704b077ae8ad205a914118c",
+              "name": "couchbase:latest",
+              "sha256_digest": "sha256: 58ff9e691dde64ae2c7b2e2807659b67789f63714704b077ae8ad205a914118c"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "configuration": {
+    "provider_config": {
+      "docker": {
+        "name": "docker",
+        "expressions": {
+          "host": {
+            "constant_value": "unix: ///var/run/docker.sock"
+          }
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "docker_container.couchbase",
+          "mode": "managed",
+          "type": "docker_container",
+          "name": "couchbase",
+          "provider_config_key": "docker",
+          "expressions": {
+            "image": {
+              "references": [
+                "docker_image.couchbase"
+              ]
+            },
+            "name": {
+              "constant_value": "couchbase"
+            }
+          },
+          "schema_version": 2
+        },
+        {
+          "address": "docker_image.couchbase",
+          "mode": "managed",
+          "type": "docker_image",
+          "name": "couchbase",
+          "provider_config_key": "docker",
+          "expressions": {
+            "name": {
+              "references": [
+                "data.docker_registry_image.couchbase"
+              ]
+            },
+            "pull_triggers": {
+              "references": [
+                "data.docker_registry_image.couchbase"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "data.docker_registry_image.couchbase",
+          "mode": "data",
+          "type": "docker_registry_image",
+          "name": "couchbase",
+          "provider_config_key": "docker",
+          "expressions": {
+            "name": {
+              "constant_value": "couchbase:latest"
+            }
+          },
+          "schema_version": 0
+        }
+      ]
+    }
+  }
+}

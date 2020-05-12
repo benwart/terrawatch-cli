@@ -6,9 +6,6 @@ export const STATE_DEFINED = 'DEFINED';
 export const STATE_RUNNING = 'RUNNING';
 export const STATE_COMPLETED = 'COMPLETED';
 export const STATE_ERROR = 'ERROR';
-export const WORK_CREATE = 'CREATE';
-export const WORK_DESTROY = 'DESTROY';
-export const WROK_UPDATE = 'UPDATE';
 
 let completedOrder = 0;
 
